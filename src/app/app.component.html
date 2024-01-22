@@ -1,4 +1,5 @@
-<div>
+<button (click)="toggleDarkMode()">Toggle Dark Mode</button>
+<div [class]="isDarkMode ? 'dark:bg-dark-primary dark:text-dark-secondary' : 'bg-light-primary text-light-secondary'">
   <router-outlet></router-outlet>
 </div>
 

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 import { CocktailDescriptionComponent } from './cocktail-description/cocktail-description.component';
+import { DarkModeService } from './dark-mode.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { CocktailDescriptionComponent } from './cocktail-description/cocktail-de
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [DarkModeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
