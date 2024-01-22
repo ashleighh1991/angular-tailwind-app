@@ -1,0 +1,14 @@
+<div class="p-64" *ngIf="cocktails && cocktails.drinks && cocktails.drinks.length > 0">
+  <ul role="list" class="divide-y divide-gray-100">
+    <li class="flex justify-between gap-x-6 py-5" *ngFor="let cocktail of cocktails.drinks">
+      <div class="flex min-w-0 gap-x-4">
+        <img class="h-36 w-36 flex-none rounded-full bg-gray-50" [routerLink]="['/cocktail', cocktail.idDrink]" [src]="cocktail.strDrinkThumb"
+          alt="{{ cocktail.strDrink }}">
+        <div class="min-w-0 flex-auto">
+          <a class="text-sm font-semibold leading-6 text-gray-900"
+          [routerLink]="['/cocktail', cocktail.idDrink]">{{ cocktail.strDrink }}</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
